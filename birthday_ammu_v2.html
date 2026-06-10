@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday Amu 🎵</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="birthday_ammu_v2.css"/>
+</head>
+<body>
+
+<div id="sprog"></div>
+<canvas id="sc"></canvas>
+<canvas id="cfc"></canvas>
+<div id="cur"></div>
+<div id="cring"></div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <canvas id="hcv"></canvas>
+  <div class="hspot" id="hspot"></div>
+
+  <!-- Spotlight cones -->
+  <div class="cone" style="left:12%;width:0;height:0;border-left:60px solid transparent;border-right:60px solid transparent;border-top:95vh solid rgba(201,168,76,.07);--cd:.4s;--cs:9s;--ca:-16deg;--cb:16deg;"></div>
+  <div class="cone" style="left:28%;width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-top:95vh solid rgba(212,116,142,.05);--cd:.8s;--cs:11s;--ca:8deg;--cb:-8deg;"></div>
+  <div class="cone" style="left:48%;width:0;height:0;border-left:90px solid transparent;border-right:90px solid transparent;border-top:95vh solid rgba(201,168,76,.065);--cd:.6s;--cs:8s;--ca:-5deg;--cb:5deg;"></div>
+  <div class="cone" style="left:68%;width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-top:95vh solid rgba(212,116,142,.05);--cd:1s;--cs:12s;--ca:10deg;--cb:-10deg;"></div>
+  <div class="cone" style="left:86%;width:0;height:0;border-left:55px solid transparent;border-right:55px solid transparent;border-top:95vh solid rgba(201,168,76,.055);--cd:1.4s;--cs:10s;--ca:-14deg;--cb:14deg;"></div>
+
+  <!-- Vinyl Left -->
+  <div class="vwrap vl">
+    <div class="vdisc" style="--vs:5s;">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs><radialGradient id="vgl"><stop offset="0%" stop-color="#281828"/><stop offset="100%" stop-color="#0d060b"/></radialGradient></defs>
+        <circle cx="100" cy="100" r="97" fill="url(#vgl)" stroke="#3a2030" stroke-width="1.2"/>
+        <circle cx="100" cy="100" r="82" fill="none" stroke="#2a1820" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="66" fill="none" stroke="#221320" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="50" fill="none" stroke="#1c1018" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="34" fill="none" stroke="#170e14" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="20" fill="#c9a84c" opacity=".88"/>
+        <circle cx="100" cy="100" r="8" fill="#0a0608"/>
+        <text x="100" y="103" text-anchor="middle" fill="#06040a" font-size="4.5" font-family="serif" font-style="italic">Amu</text>
+        <ellipse cx="76" cy="60" rx="18" ry="8" fill="rgba(255,255,255,.055)" transform="rotate(-30 76 60)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Vinyl Right -->
+  <div class="vwrap vr">
+    <div class="vdisc" style="--vs:7s;animation-direction:normal;">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="animation-direction:reverse;">
+        <defs><radialGradient id="vgr"><stop offset="0%" stop-color="#1e1428"/><stop offset="100%" stop-color="#080610"/></radialGradient></defs>
+        <circle cx="100" cy="100" r="97" fill="url(#vgr)" stroke="#2a2040" stroke-width="1.2"/>
+        <circle cx="100" cy="100" r="82" fill="none" stroke="#201830" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="66" fill="none" stroke="#1a1428" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="50" fill="none" stroke="#141020" stroke-width=".7"/>
+        <circle cx="100" cy="100" r="20" fill="#d4748e" opacity=".82"/>
+        <circle cx="100" cy="100" r="8" fill="#080608"/>
+        <ellipse cx="76" cy="60" rx="18" ry="8" fill="rgba(255,255,255,.05)" transform="rotate(-30 76 60)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Staff lines -->
+  <div style="position:absolute;left:0;right:0;top:40%;pointer-events:none;z-index:4;">
+    <div style="position:absolute;left:5%;right:5%;height:1px;background:rgba(201,168,76,.055);top:0;"></div>
+    <div style="position:absolute;left:5%;right:5%;height:1px;background:rgba(201,168,76,.055);top:10px;"></div>
+    <div style="position:absolute;left:5%;right:5%;height:1px;background:rgba(201,168,76,.055);top:20px;"></div>
+    <div style="position:absolute;left:5%;right:5%;height:1px;background:rgba(201,168,76,.055);top:30px;"></div>
+    <div style="position:absolute;left:5%;right:5%;height:1px;background:rgba(201,168,76,.055);top:40px;"></div>
+  </div>
+
+  <div class="hbadge">✦ A Song From The Heart ✦</div>
+
+  <div class="micstage">
+    <div class="mring"></div><div class="mring"></div><div class="mring"></div>
+    <span class="mico">🎤</span>
+  </div>
+
+  <h1 class="htitle">Happy Birthday</h1>
+  <div class="hname" id="hname"></div>
+  <p class="hsub">The voice that colours every room she walks into</p>
+  <div class="eqrow" id="eqrow"></div>
+  <p class="hmsg">To the woman whose laughter is a melody and whose presence is a whole concert —<br>today the stage is yours, di. May this birthday be your most beautiful verse yet. 🌸</p>
+  <div class="scrollcue"><div class="sbar"></div>scroll</div>
+</section>
+
+<!-- ═══ WAVE ═══ -->
+<div class="wavediv"><canvas id="wcv"></canvas></div>
+
+<!-- ═══ TICKER ═══ -->
+<div class="tickbar"><div class="ticktrack" id="ticker"></div></div>
+
+<!-- ═══ STATS ═══ -->
+<section class="statssec">
+  <div class="statsgrid reveal">
+    <div class="statcell">
+      <span class="stati">🎤</span>
+      <div class="statn">One</div>
+      <div class="statl">Voice, Countless Hearts</div>
+    </div>
+    <div class="statcell">
+      <span class="stati">🌟</span>
+      <div class="statn">∞</div>
+      <div class="statl">Memories Together</div>
+    </div>
+    <div class="statcell">
+      <span class="stati">🎂</span>
+      <div class="statn">Today</div>
+      <div class="statl">Belongs to You, Di</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SYMPHONY TIMELINE ═══ -->
+<section class="symphonyviz">
+  <div class="snotes-float" id="snotesfloat"></div>
+  <h2 class="sech reveal">The <em>Symphony</em> of Her Life</h2>
+  <p class="secsub reveal d1">Every year a new movement, every moment a verse ✦</p>
+
+  <div class="stl-wrap reveal d2">
+    <div class="stl-axis"></div>
+
+    <!-- Row 1: left card -->
+    <div class="stl-row">
+      <div class="stl-card stl-card-gold stl-left-card">
+        <span class="card-ico">🌙</span>
+        <div class="card-ttl">The First Note</div>
+        <p class="card-txt">The day she arrived, the world gained a melody it didn't know it was missing. A soul so rare, so luminous — born to make everything around her feel more alive.</p>
+      </div>
+      <div class="stl-node">
+        <div class="stl-dot">♩</div>
+        <span class="stl-lbl">Chapter I</span>
+      </div>
+      <div class="stl-empty"></div>
+    </div>
+
+    <!-- Row 2: right card -->
+    <div class="stl-row">
+      <div class="stl-empty"></div>
+      <div class="stl-node">
+        <div class="stl-dot">🎵</div>
+        <span class="stl-lbl">Chapter II</span>
+      </div>
+      <div class="stl-card stl-card-rose stl-right">
+        <span class="card-ico">🎤</span>
+        <div class="card-ttl">Finding Her Voice</div>
+        <p class="card-txt">Music didn't choose her — she chose music, again and again, until the two became inseparable. Every note she learned was a word she finally had to say what words alone never could.</p>
+      </div>
+    </div>
+
+    <!-- Row 3: left card -->
+    <div class="stl-row">
+      <div class="stl-card stl-card-violet stl-left-card">
+        <span class="card-ico">✨</span>
+        <div class="card-ttl">The Golden Chapter</div>
+        <p class="card-txt">Growing into herself, quietly and brilliantly. The girl who once hummed softly began to fill every room she entered — not with noise, but with presence.</p>
+      </div>
+      <div class="stl-node">
+        <div class="stl-dot">♫</div>
+        <span class="stl-lbl">Chapter III</span>
+      </div>
+      <div class="stl-empty"></div>
+    </div>
+
+    <!-- Row 4: right card -->
+    <div class="stl-row">
+      <div class="stl-empty"></div>
+      <div class="stl-node">
+        <div class="stl-dot">🌸</div>
+        <span class="stl-lbl">Chapter IV</span>
+      </div>
+      <div class="stl-card stl-card-gold stl-right">
+        <span class="card-ico">💛</span>
+        <div class="card-ttl">Heart Full of Songs</div>
+        <p class="card-txt">She loves the way the best musicians play — fully, generously, leaving nothing on the stage. Her heart has always known only one volume: everything, given freely to the people she loves.</p>
+      </div>
+    </div>
+
+    <!-- Row 5: left card -->
+    <div class="stl-row">
+      <div class="stl-card stl-card-rose stl-left-card">
+        <span class="card-ico">🌟</span>
+        <div class="card-ttl">The Rising Star</div>
+        <p class="card-txt">The world began to listen. Heads turned, ears tilted — because something about her voice carries truth. Not just talent, but the kind of authenticity you can feel in your chest.</p>
+      </div>
+      <div class="stl-node">
+        <div class="stl-dot">♬</div>
+        <span class="stl-lbl">Chapter V</span>
+      </div>
+      <div class="stl-empty"></div>
+    </div>
+
+    <!-- Row 6: right card — TODAY -->
+    <div class="stl-row">
+      <div class="stl-empty"></div>
+      <div class="stl-node">
+        <div class="stl-dot">🎂</div>
+        <span class="stl-lbl">Today</span>
+      </div>
+      <div class="stl-card stl-card-violet stl-right">
+        <span class="card-ico">🎉</span>
+        <div class="card-ttl">Today's Verse — Her Most Beautiful Yet</div>
+        <p class="card-txt">This birthday isn't just another year. It's the opening of a movement she's been building toward her whole life. The stage is set, the orchestra is ready — Amu, this one is entirely yours. 🌺</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SPARKS SECTION ═══ -->
+<section class="sparksec">
+  <h2 class="sech reveal">The <em>Stars</em> of Her Story</h2>
+  <p class="secsub reveal d1">Everything that makes Amu, her ✦</p>
+  <div class="sparkgrid reveal d2">
+
+    <div class="sparkcard sc-w2">
+      <div class="sparkico">🎤</div>
+      <div class="sparkttl">The Voice That Fills Every Room</div>
+      <div class="sparktxt">She doesn't just sing — she transforms the air itself. Every note she carries has warmth, story, and a magic that's entirely hers. In a world full of noise, her voice is the one that makes everyone go quiet and listen.</div>
+    </div>
+
+    <div class="sparkcard sc-rose">
+      <div class="sparkico">💛</div>
+      <div class="sparkttl">Golden Heart</div>
+      <div class="sparktxt">Her kindness is never conditional. She gives freely, loves deeply, and cares more than she ever lets on.</div>
+    </div>
+
+    <div class="sparkcard sc-violet">
+      <div class="sparkico">✨</div>
+      <div class="sparkttl">Radiant Presence</div>
+      <div class="sparktxt">Wherever she walks, the room brightens. Not because she tries — just because she's her.</div>
+    </div>
+
+    <div class="sparkcard sc-rose">
+      <div class="sparkico">🌸</div>
+      <div class="sparkttl">Quietly Unstoppable</div>
+      <div class="sparktxt">She bends but never breaks. Every challenge becomes a verse in her story, and she always finds the chorus again.</div>
+    </div>
+
+    <div class="sparkcard sc-violet">
+      <div class="sparkico">🎶</div>
+      <div class="sparkttl">A Life Set to Music</div>
+      <div class="sparktxt">Music isn't just what she does — it's how she thinks, feels, and sees the world. Her entire life has a melody.</div>
+    </div>
+
+    <div class="sparkcard sc-w2">
+      <div class="sparkico">🌟</div>
+      <div class="sparkttl">Born for the Stage</div>
+      <div class="sparktxt">The spotlight finds her even when she isn't looking for it. She has that rare quality — a presence that can't be taught, only born. Today we celebrate the one the stage was always made for. Shine on, di. The world is listening. 🌺</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ POLAROID WALL ═══ -->
+<section class="polarsec">
+  <h2 class="sech reveal">The <em>Polaroid</em> Wall</h2>
+  <p class="secsub reveal d1">Twenty frames. One beautiful story ✦</p>
+  <div class="polargrid reveal d2" id="polargrid"></div>
+</section>
+
+<!-- ═══ SOUND ═══ -->
+<div class="soundsec">
+  <h3 class="soundh reveal">Every Song She Sings is <em>Magic</em></h3>
+  <p class="sounds reveal d1">🎵 Playing the melody of her life 🎵</p>
+  <canvas id="scv"></canvas>
+</div>
+
+<!-- ═══ LETTER ═══ -->
+<section class="lettersec">
+  <div class="auroraf">
+    <div class="aura"></div><div class="aura"></div><div class="aura"></div>
+  </div>
+  <div class="ltrwrap reveal">
+    <div class="seal">♬</div>
+    <div class="lcard">
+      <p class="lsal">My dearest Amu,</p>
+      <div class="lbody">
+        <p>There are some people who don't just live life — they <strong>sing it</strong>. Every story they tell lands like a perfectly placed note; every room they enter fills with a frequency that makes everything feel a little more alive. You are exactly that person.</p>
+        <p>Your voice isn't just something you carry in your throat — it lives in your eyes when you laugh, in your hands when you talk, in the way you make everyone around you feel <strong>heard and held</strong>.</p>
+        <p>On this birthday, I want you to know: you are loved more than any lyric could express, celebrated louder than any chorus, and cherished in all the quiet verses too.</p>
+        <p>May this year be your <strong>magnum opus</strong> — full of music, full of magic, full of everything that makes you, <em>you</em>. 🌸</p>
+      </div>
+      <div class="lsign">With so much love 🌺</div>
+      <div class="lhrt">♥ ♥ ♥</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div class="lb" id="lb">
+  <div class="lbwrap">
+    <button class="lbx" id="lbx">✕</button>
+    <button class="lbbtn lbprev" id="lbprev">‹</button>
+    <img id="lbimg" src="" alt=""/>
+    <button class="lbbtn lbnext" id="lbnext">›</button>
+    <div class="lbcnt" id="lbcnt"></div>
+  </div>
+</div>
+
+<script src="birthday_ammu_v2.js"></script>
+</body>
+</html>
