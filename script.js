@@ -1,9 +1,9 @@
 const IMGS=[
-  "img (1).jpg","img (1).png","img (1).webp",
-  "img (2).jpg","img (2).webp",
-  "img (3).jpg","img (4).jpg","img (5).jpg","img (6).jpg","img (7).jpg",
-  "img (8).jpg","img (9).jpg","img (10).jpg","img (11).jpg","img (12).jpg",
-  "img (13).jpg","img (14).jpg","img (15).jpg","img (16).jpg","img (17).jpg"
+  "ammu di folder/img1.jpg","ammu di folder/img1.png","ammu di folder/img1.webp",
+  "ammu di folder/img2.jpg","ammu di folder/img2.webp",
+  "ammu di folder/img3.jpg","ammu di folder/img4.jpg","ammu di folder/img5.jpg","ammu di folder/img6.jpg","ammu di folder/img7.jpg",
+  "ammu di folder/img8.jpg","ammu di folder/img9.jpg","ammu di folder/img10.jpg","ammu di folder/img11.jpg","ammu di folder/img12.jpg",
+  "ammu di folder/img13.jpg","ammu di folder/img14.jpg","ammu di folder/img15.jpg","ammu di folder/img16.jpg","ammu di folder/img17.jpg"
 ];
 const PCAP=["✨","🌸","💛","🎵","🌟","🎤","💖","🎶","🌺","✦","🎼","🌸","💛","✨","🌟","🎵","💖","🌺","✦","🎶"];
 const PROT=[-8,-5,-12,4,7,-3,10,-6,3,-9,5,-4,8,-7,11,-2,6,-4,9,-7];
