@@ -29,11 +29,18 @@ window.addEventListener("load", () => {
       setTimeout(() => e.remove(), 4000);
     }, 150);
 
-    setTimeout(() => {
+    const startExperience = () => {
       clearInterval(loaderInterval);
       loader.classList.add("fade-out");
       setTimeout(() => loader.remove(), 800);
-    }, 1500); // 1.5s minimum load time
+      
+      const bgMusic = document.getElementById("bg-music");
+      if (bgMusic && bgMusic.paused) {
+        bgMusic.play().catch(e => console.log("Audio play failed:", e));
+      }
+      document.body.removeEventListener("click", startExperience);
+    };
+    document.body.addEventListener("click", startExperience);
   }
 
   // Continuous slower spawning for the whole page background
@@ -46,7 +53,7 @@ window.addEventListener("load", () => {
     e.style.fontSize = (16 + Math.random() * 20) + "px"; // Slightly smaller
     document.body.appendChild(e);
     setTimeout(() => e.remove(), 10000); // Give it time to reach the top
-  }, 400); // Spawn one every 400ms
+  }, window.innerWidth < 768 ? 1500 : 400);
 });
 
 const IMGS = [
@@ -242,7 +249,8 @@ document.getElementById("hero").addEventListener(
   const setup = () => {
     W = cv.width = cv.offsetWidth;
     H = cv.height = cv.offsetHeight;
-    pts = Array.from({ length: Math.floor((W * H) / 5200) }, () => ({
+    const density = window.innerWidth < 768 ? 12000 : 5200;
+    pts = Array.from({ length: Math.floor((W * H) / density) }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
       vx: (Math.random() - 0.5) * 0.25,
@@ -736,7 +744,8 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     
     // Generate stars
     stars.length = 0;
-    const starCount = Math.floor((W * H) / 6000); 
+    const starDensity = window.innerWidth < 768 ? 15000 : 6000;
+    const starCount = Math.floor((W * H) / starDensity); 
     for (let i = 0; i < starCount; i++) {
       stars.push({
         x: Math.random() * W,
@@ -860,4 +869,5 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     requestAnimationFrame(draw);
   })();
 })();
+
 

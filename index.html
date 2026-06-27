@@ -13,8 +13,9 @@
 
 <body>
   <!-- LOADER -->
-  <div id="loader">
+  <div id="loader" style="cursor: pointer;">
     <div class="loader-text">Happy Birthday...</div>
+    <div class="loader-prompt" style="font-family: 'DM Sans', sans-serif; font-size: 1.2rem; color: #fff; margin-top: 20px; opacity: 0.8; letter-spacing: 2px; text-align: center;">Click anywhere to open</div>
   </div>
   <!-- Animated mesh gradient background -->
   <div id="meshbg">
@@ -392,6 +393,8 @@
     </div>
   </div>
 
+  <!-- Background Music -->
+  <audio id="bg-music" src="a.mp3" autoplay loop style="display: none;"></audio>
   <script src="script.js"></script>
 </body>
 

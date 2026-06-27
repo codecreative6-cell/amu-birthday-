@@ -2128,5 +2128,9 @@ body::before {
   }
 }
 
-
-
+/* MOBILE PERFORMANCE OPTIMIZATIONS */
+@media (max-width: 768px) {
+  .mesh-blob {
+    filter: blur(40px); /* Significantly reduced blur for mobile GPUs */
+  }
+}
